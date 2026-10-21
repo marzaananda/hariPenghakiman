@@ -116,7 +116,7 @@ img {
 .shop {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px ;
+  gap: 8px;
   padding: 4px
 }
 
@@ -240,13 +240,18 @@ button {
   text-decoration: none;
 }
 
+.btn:hover {
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
 button:hover {
   text-decoration: underline;
 }
-footer{
+
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: end;
 }
-
