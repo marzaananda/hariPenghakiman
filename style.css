@@ -7,7 +7,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   background: #000
 }
 
@@ -25,8 +25,7 @@ a {
   text-decoration: none
 }
 
-a:hover,
-a:focus-visible {
+a:hover {
   text-decoration: underline;
   text-underline-offset: 6px
 }
@@ -40,20 +39,23 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: #D9D9D9;
   color: #D9D9D9
 }
 
 .credit {
   position: fixed;
   left: 4px;
+  /* right: 4px; */
   top: 50%;
   writing-mode: vertical-lr;
   transform: rotate(180deg) translateY(50%);
   font-size: 10px;
-  letter-spacing: .05em;
   color: #fff
 }
+
+/* .frame {
+  border: 2px solid #fff;
+} */
 
 .frame {
   position: relative;
@@ -63,12 +65,9 @@ img {
 }
 
 .hero {
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  /* align-items: flex-start; */
   min-height: 620px;
   padding: 24px 20px 22px;
   border-bottom: 2px solid #fff;
@@ -76,20 +75,20 @@ img {
 }
 
 .hero-left {
-  align-self: flex-start
+  align-self: flex-start;
+  /* width: min(240px, 100%); */
+  /* font-size: 12px; */
+
 }
 
 .hero h1 {
   font-size: 46px;
   font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: .01em;
   margin-bottom: 28px
 }
 
 .hero nav li {
   font-size: 24px;
-  line-height: 1;
   margin-bottom: 26px
 }
 
@@ -97,7 +96,8 @@ img {
   width: min(240px, 100%);
   font-size: 12px;
   color: #D9D9D9;
-  line-height: 1.5
+  line-height: 1.5;
+  align-self: flex-end;
 }
 
 .gallery-row {
@@ -108,33 +108,24 @@ img {
 
 .gallery-row figure {
   aspect-ratio: 1/2;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  gap: 0.1;
+  border: 1px solid #fff;
   overflow: hidden;
-  background: #D9D9D9
-}
-
-.gallery-row figure:last-child {
-  border-right: 0
-}
-
-.gallery {
-  border-bottom: 2px solid #fff
-}
-
-.gallery-row:last-child figure {
-  border-bottom: 0
 }
 
 .shop {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px 8px;
-  padding: 8px
+  gap: 8px ;
+  padding: 4px
+}
+
+.shop p {
+  min-height: (250px, 100%);
 }
 
 .card img {
-  aspect-ratio: 1.5/1;
+  aspect-ratio: 1, 5/1;
   height: auto;
   border-radius: 8px
 }
@@ -142,7 +133,7 @@ img {
 .card h2 {
   font-size: 16px;
   font-weight: 400;
-  margin-top: 6px
+  margin-top: 2px
 }
 
 .card .price {
@@ -160,7 +151,7 @@ img {
   position: absolute;
   width: 1px;
   height: 1px;
-  overflow: hidden;
+  /* overflow: hidden; */
   clip: rect(0 0 0 0);
   white-space: nowrap
 }
@@ -205,9 +196,6 @@ img {
     grid-template-columns: repeat(2, 1fr)
   }
 
-  .gallery-row figure:nth-child(2n) {
-    border-right: 0
-  }
 
   .shop {
     grid-template-columns: repeat(2, 1fr)
@@ -223,3 +211,42 @@ img {
     grid-template-columns: 1fr
   }
 }
+
+.figura h1,
+p {
+  padding: 10px;
+}
+
+.figura-mid {
+  padding: 10px;
+  display: flex;
+  justify-items: auto;
+  align-items: center;
+  background-color: chocolate;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 0;
+}
+
+.btn {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: end;
+}
+
